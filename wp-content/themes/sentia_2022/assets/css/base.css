@@ -1,0 +1,37 @@
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: white;
+    color: black;
+    font: normal 1rem var(--primary);
+    line-height: 1.25;
+}
+
+a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--red);
+}
+
+.page-width {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--desktop);
+    width: calc( 100% - 4rem );
+}
+
+.content-width {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--content);
+    width: calc( 100% - 4rem );
+}
+
+
+

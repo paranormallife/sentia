@@ -1,5 +1,5 @@
 # Ignore everything except themes and plugins
-*
-!wp-content/mu-plugins/
-!wp-content/plugins/
-!wp-content/themes/
+/*
+!wp-content/
+wp-content/uploads/*
+wp-content/themes/twenty*

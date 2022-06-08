@@ -17,7 +17,7 @@
 <body id="body" class="asw <?php if(is_front_page()) { echo 'home '; } else { echo get_post_type(); echo ' '; echo $post->post_name; } ?>">
 
 <header>
-  
+  <?php get_template_part('snippets/header_nav'); ?>
 </header>
 
 <!-- END OF HEADER.PHP -->

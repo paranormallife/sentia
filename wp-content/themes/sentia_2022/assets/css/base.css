@@ -5,18 +5,19 @@ html {
 
 body {
     background-color: white;
-    color: black;
-    font: normal 1rem var(--primary);
+    color: var(--charcoal);
+    font: normal 1rem var(--copy);
     line-height: 1.25;
 }
 
 a {
-    color: var(--blue);
+    color: var(--salamander);
     text-decoration: none;
 }
 
 a:hover {
-    color: var(--red);
+    color: var(--salamander);
+    text-decoration: underline;
 }
 
 .page-width {

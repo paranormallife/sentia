@@ -24,7 +24,7 @@ a:hover {
     margin-left: auto;
     margin-right: auto;
     max-width: var(--desktop);
-    width: calc( 100% - 4rem );
+    width: calc( 100% - 2rem );
 }
 
 .content-width {
@@ -33,6 +33,80 @@ a:hover {
     max-width: var(--content);
     width: calc( 100% - 4rem );
 }
+
+.header-container {
+    align-items: center;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas:
+        "logo logo logo logo"
+        "phone appointment search-toggle menu-toggle"
+        "menu menu menu menu"
+        "search search search search";
+    grid-template-columns: 2.5rem 2.5rem 2.5rem 1fr;
+    justify-content: left;
+    padding: 1rem 0;
+}
+
+.header-logo {
+    grid-area: logo;
+}
+
+.header-logo img {
+    display: block;
+    margin: 0 auto;
+    max-width: 290px;
+    width: 100%;
+}
+
+.header-phone {
+    grid-area: phone;
+}
+
+.header-phone .label,
+.header-appointment .label {
+    display: none;
+}
+
+.header-phone .icon,
+.header-appointment .icon,
+.search-icon,
+.menu-open,
+.menu-close {
+    align-items: center;
+    background-color: var(--charcoal);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    font-size: 1.5rem;
+    height: 2.5rem;
+    justify-content: center;
+    width: 2.5rem;
+}
+
+.menu-open {
+    background-color: var(--turquoise);
+}
+
+.menu-close {
+    background-color: var(--salamander);
+}
+
+.navigation-toggle {
+    justify-self: end;
+}
+
+body:not(.menu-active) .menu-close,
+body.menu-active .menu-open,
+body:not(.menu-active) .navigation,
+body:not(.search-active) .search {
+    display: none;
+}
+
+body.search-active .search-icon {
+    background-color: var(--salamander);
+}
+
 
 
 

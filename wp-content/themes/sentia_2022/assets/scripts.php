@@ -2,16 +2,13 @@
 	function menuToggle() {
 		var element = document.getElementById("body");
 		element.classList.toggle("menu-active");
-	}
-	
-	function openQuickConnect() {
-		var element = document.getElementById("body");
-		element.classList.add("quick-connect-active");
+		element.classList.remove("search-active");
 	}
 
-	function closeQuickConnect() {
+	function searchToggle() {
 		var element = document.getElementById("body");
-		element.classList.remove("quick-connect-active");
+		element.classList.toggle("search-active");
+		element.classList.remove("menu-active");
 	}
 
 	// Child Menus Toggle

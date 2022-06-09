@@ -34,6 +34,10 @@ a:hover {
     width: calc( 100% - 4rem );
 }
 
+header {
+    border-bottom: 2px solid var(--off-white);
+}
+
 .header-container {
     align-items: center;
     display: grid;
@@ -45,7 +49,7 @@ a:hover {
         "search search search search";
     grid-template-columns: 2.5rem 2.5rem 2.5rem 1fr;
     justify-content: left;
-    padding: 1rem 0;
+    padding: 1rem 0 0 0;
 }
 
 .header-logo {
@@ -127,13 +131,15 @@ body.search-active .search-icon {
 
 body.menu-active .navigation ul {
     max-height: 9999px;
-}.search {
+}
+
+.search {
     grid-area: search;
 }
 
 .search .fields {
     display: flex;
-    margin-top: 0.5rem;
+    margin: 0.5rem 0 1rem 0;
 }
 
 .search input {
@@ -154,6 +160,12 @@ body.menu-active .navigation ul {
     background-color: var(--salamander);
     border: 1px solid var(--salamander);
     color: white;
+    cursor: pointer;
+}
+
+.search input[type=submit]:hover {
+    background-color: var(--turquoise);
+    border: 1px solid var(--turquoise);
 }
 
 .search input[type=text] {

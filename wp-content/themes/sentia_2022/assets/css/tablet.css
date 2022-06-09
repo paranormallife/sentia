@@ -1,3 +1,68 @@
 @media screen and ( min-width: 50rem ) {
+    .header-container {
+        align-items: end;
+        grid-template-areas:
+            "logo phone appointment search-toggle menu-toggle"
+            "search search search search search"
+            "menu menu menu menu menu";
+        grid-template-columns: 1fr auto auto auto auto;
+        padding: 2rem 0 0 0;
+    }
     
+    .header-logo img {
+        margin: 0;
+    }
+    
+    .header-phone .icon, .header-appointment .icon {
+        font-size: 1rem;
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+    
+    .header-phone .label, .header-appointment .label {
+        display: inline-block;
+        margin-left: 0.5rem;
+    }
+    
+    .header-phone a, .header-appointment a {
+        display: flex;
+        color: var(--turquoise);
+    }
+    
+    .header-phone, .header-appointment {
+        margin-bottom: 0.25rem;
+    }
+
+    .navigation ul li {
+        display: inline-block;
+    }
+    
+    .navigation ul {
+        text-align: right;
+    }
+    
+    .navigation {
+        justify-self: end;
+    }
+    
+    .navigation ul li:not(:last-of-type):after {
+        border-right: 1px solid var(--off-white);
+        content: ' ';
+        display: inline-block;
+        height: 2rem;
+        margin: 0 1rem;
+        transform: translateY(0.5rem);
+        width: 1px;
+    }
+    
+    .navigation a {
+        display: inline-block;
+    }
+    
+    .search {
+        grid-area: search;
+        justify-self: end;
+        max-width: 40rem;
+        width: 100%;
+    }
 }

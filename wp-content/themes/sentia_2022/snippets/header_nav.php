@@ -2,6 +2,7 @@
     $phone = get_theme_mod('phone_number');
     $appointment_label = get_theme_mod('appointment_label');
     $appointment_destination = get_theme_mod('appointment_destination');
+    $appointment_url = get_permalink( $appointment_destination );
 ?>
 
 <div class="header-container page-width">
@@ -22,7 +23,7 @@
     </div>
     <div class="header-appointment">
         <?php if( $appointment_destination ) : ?>
-            <a href="<?= $appointment_destination; ?>" title="<?= $appointment_label; ?>">
+            <a href="<?= $appointment_url; ?>" title="<?= $appointment_label; ?>">
                 <span class="icon"><ion-icon name="calendar-clear"></ion-icon></span>
                 <span class="label"><?= $appointment_label; ?></span>
             </a>

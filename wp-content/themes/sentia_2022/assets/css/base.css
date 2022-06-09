@@ -182,6 +182,70 @@ body.search-active .search-form {
     max-height: 9999px;
 }
 
+footer {
+    background-color: var(--charcoal);
+    color: white;
+    padding: 2rem 0;
+}
+
+footer ul.menu {
+    list-style-type: none;
+    text-align: center;
+}
+
+footer ul.menu li {
+    display: inline-block;
+}
+
+footer ul.menu li a {
+    color: white;
+    text-transform: uppercase;
+}
+
+footer ul.menu li:not(:last-of-type):after {
+    color: var(--turquoise);
+    content: '|';
+    margin: 0 0.5rem;
+}
+
+.footer-columns {
+    margin: 1rem 0;
+}
+
+.footer-columns .column {
+    margin-bottom: 1rem;
+}
+
+.footer-newsletter {
+    margin-top: 1rem;
+}
+
+.footer-newsletter input {
+    appearance: none;
+    border: 0;
+    display: flex;
+    font: normal 0.85rem var(--copy);
+    height: 2rem;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.footer-newsletter input:focus {
+    outline: none;
+    border: 1px solid var(--salamander);
+}
+
+.footer-newsletter input[type=submit] {
+    background-color: var(--salamander);
+    color: white;
+    cursor: pointer;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.footer-newsletter input[type=submit]:hover {
+    background-color: var(--turquoise);
+}
 
 
 

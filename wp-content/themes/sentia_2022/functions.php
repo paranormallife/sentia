@@ -25,8 +25,53 @@ function register_my_menus() {
 function asw_widgets_init() {
 
 	register_sidebar( array(
-		'name'          => 'Social Media Links',
-		'id'            => 'social_links',
+		'name'          => 'Footer Top',
+		'id'            => 'footer_top',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '',
+		'after_title'   => ''
+	) );
+
+	register_sidebar( array(
+		'name'          => 'Footer Column 1',
+		'id'            => 'footer_column_1',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '',
+		'after_title'   => ''
+	) );
+
+	register_sidebar( array(
+		'name'          => 'Footer Column 2',
+		'id'            => 'footer_column_2',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '',
+		'after_title'   => ''
+	) );
+
+	register_sidebar( array(
+		'name'          => 'Footer Column 3',
+		'id'            => 'footer_column_3',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '',
+		'after_title'   => ''
+	) );
+
+	register_sidebar( array(
+		'name'          => 'Footer Column 4',
+		'id'            => 'footer_column_4',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '',
+		'after_title'   => ''
+	) );
+
+	register_sidebar( array(
+		'name'          => 'Footer Bottom',
+		'id'            => 'footer_bottom',
 		'before_widget' => '',
 		'after_widget'  => '',
 		'before_title'  => '',

@@ -112,4 +112,14 @@
     .branded-heading {
         font-size: 4rem;
     }
+
+    .grid-content.columns-2 .grid,
+    .grid-content.columns-4 .grid {
+        grid-template-columns: 1fr 1fr;    
+    }
+
+    .grid-content.columns-3 .grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
 }

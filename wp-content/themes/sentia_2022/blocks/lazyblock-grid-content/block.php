@@ -20,7 +20,7 @@
                 <?php if( $destination ) : ?><a href="<?= $destination; ?>"><?php endif; ?>
                     <div class="thumb" style="background-image: url('<?= $image; ?>');">&nbsp;</div>
                     <h3><?= $heading; ?></h3>
-                    <div class="blurb"><?= $blurb; ?></div>
+                    <div class="blurb"><span><?= $blurb; ?></span></div>
                 <?php if( $destination ) : ?></a><?php endif; ?>
             </div>
         <?php endforeach; ?>

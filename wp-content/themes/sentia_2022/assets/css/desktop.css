@@ -1,4 +1,29 @@
 @media screen and ( min-width: 82rem ) {
 
+    .media-feature {
+        align-items: stretch;
+        grid-template-columns: 66.66% 1fr;
+    }
     
+    .media-feature .heading {
+        grid-column: 1 / span all;
+        max-width: 66.66%;
+    }
+
+    .branded-heading {
+        font-size: 5rem;
+    }
+    
+    .media-feature .subheading {
+        font-size: 3rem;
+        line-height: 0.75;
+    }
+    
+    .media-feature .content {
+        font-size: 1.25rem;
+    }
+    
+    .button {
+        width: auto;
+    }
 }

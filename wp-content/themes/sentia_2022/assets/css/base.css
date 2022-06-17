@@ -20,6 +20,15 @@ a:hover {
     text-decoration: underline;
 }
 
+p {
+    margin-bottom: 1rem;
+}
+
+h1, h2, h3 {
+    font-family: var(--heading);
+    font-weight: normal;
+}
+
 .page-width {
     margin-left: auto;
     margin-right: auto;
@@ -247,5 +256,125 @@ footer ul.menu li:not(:last-of-type):after {
     background-color: var(--turquoise);
 }
 
+main {
+    padding: 2rem 0;
+}
 
+.branded-heading {
+    font-size: 2.5rem;
+    line-height: 0.9;
+    margin-bottom: 1rem;
+}
 
+.branded-heading em {
+    color: var(--salamander);
+    font-style: normal;
+}
+
+.branded-heading:after {
+    background: url(../images/scribble.svg) bottom left no-repeat;
+    background-size: contain;
+    content: ' ';
+    display: inline-block;
+    height: 0.5em;
+    margin-left: 0.1em;
+    width: 0.25em;
+}
+
+.media-feature .heading {
+    position: relative;
+    transform: translateY(1.5rem);
+}
+
+.media-feature {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+    margin-bottom: 1rem;
+}
+
+.media-feature .media {
+    width: 100%;
+}
+
+.media-feature .branded-heading {
+    margin-bottom: 0;
+}
+
+.media-feature .content {
+    background-color: var(--turquoise);
+    color: white;
+    padding: 1rem;
+}
+
+.media-feature .subheading {
+    font: normal 2rem var(--heading);
+    margin-bottom: 1rem;
+}
+
+.media-feature .media img {
+    width: 100%;
+}
+
+.button {
+    background-color: var(--salamander);
+    color: white;
+    display: table;
+    padding: 0.5em;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    background-color: var(--turquoise);
+}
+
+.button.light {
+    background-color: white;
+    color: var(--salamander);
+}
+
+.button.light:hover {
+    background-color: white;
+    color: var(--charcoal);
+}
+
+.asw .wp-block-media-text .wp-block-media-text__content {
+    margin: 1rem 0;
+    padding: 0;
+}
+
+.asw .wp-block-button__link {
+    text-transform: uppercase;
+}
+
+@media screen and ( min-width: 601px ) {
+    .asw .wp-block-media-text .wp-block-media-text__content {
+        margin: 0;
+        padding: 1rem;
+    }
+}
+
+.grid-content a .blurb {
+    color: var(--charcoal);
+}
+
+.grid-content h3 {
+    font: normal 1.25rem var(--copy);
+    text-transform: uppercase;
+}
+
+.grid-content .thumb {
+    background-position: center;
+    background-size: cover;
+    background-color: #EDEDED;
+    display: block;
+    height: 0;
+    margin-bottom: 1rem;
+    padding-top: 100%;
+}
+
+.grid-content .grid {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+}

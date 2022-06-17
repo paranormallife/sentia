@@ -13,18 +13,21 @@
         margin: 0;
     }
     
-    .header-phone .icon, .header-appointment .icon {
+    .header-phone .icon,
+    .header-appointment .icon {
         font-size: 1rem;
         height: 1.5rem;
         width: 1.5rem;
     }
     
-    .header-phone .label, .header-appointment .label {
+    .header-phone .label,
+    .header-appointment .label {
         display: inline-block;
         margin-left: 0.5rem;
     }
     
-    .header-phone a, .header-appointment a {
+    .header-phone a,
+    .header-appointment a {
         display: flex;
         color: var(--turquoise);
     }
@@ -90,5 +93,23 @@
     
     .footer-newsletter {
         margin-top: 2rem;
+    }
+
+    .media-feature {
+        align-items: stretch;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .media-feature .heading {
+        grid-column: 1 / span all;
+    }
+
+    .media-feature .content {
+        align-items: center;
+        display: flex;
+    }
+
+    .branded-heading {
+        font-size: 4rem;
     }
 }

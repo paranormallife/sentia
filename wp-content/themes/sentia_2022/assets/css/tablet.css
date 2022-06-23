@@ -122,4 +122,30 @@
         grid-template-columns: 1fr 1fr 1fr;
     }
 
+    .testimonials-carousel .testimonial .quote {
+        margin: 0 auto;
+        max-width: var(--tablet);
+    }
+    
+    .testimonials-carousel .testimonial {
+        font-size: 1.5rem;
+    }
+    
+    .testimonials-carousel-container {
+        padding: 4rem 0;
+    }
+    
+    .testimonials-navigation .slick-dots {
+        margin-top: 2rem;
+    }
+    
+    .carousel-arrow {
+        opacity: 0.5;
+        top: calc( 50% - 1rem );
+    }
+    
+    .carousel-arrow:hover {
+        opacity: 1;
+    }
+
 }

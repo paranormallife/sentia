@@ -46,7 +46,7 @@ function create_testimonial_cpt() {
 		'show_in_admin_bar' => true,
 		'show_in_nav_menus' => false,
 		'can_export' => true,
-		'has_archive' => true,
+		'has_archive' => false,
 		'hierarchical' => true,
 		'exclude_from_search' => true,
 		'show_in_rest' => true,

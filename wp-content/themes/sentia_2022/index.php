@@ -15,6 +15,11 @@
             <?php get_template_part('snippets/testimonials_carousel'); ?>
         <?php endif; ?>
 
+    <?php elseif( is_page('testimonials') ) : ?>
+
+        <?php the_content(); ?>
+        <?php get_template_part('snippets/testimonials'); ?>
+
     <?php endif; ?>
 
 </main>

@@ -7,7 +7,7 @@
 
 <div class="header-container page-width">
     <div class="header-logo">
-        <a href="<?= get_bloginfo( $wpurl ); ?>" title="<?php get_bloginfo( 'name' ); ?> Homepage">
+        <a href="<?= get_bloginfo( 'wpurl' ); ?>" title="<?php get_bloginfo( 'name' ); ?> Homepage">
             <?php if( is_front_page() ) : ?><h1><?php endif; ?>
                 <img src="<?= get_stylesheet_directory_uri(); ?>/assets/images/sentia-logo.svg" alt="Sentia logo" />
             <?php if( is_front_page() ) : ?></h1><?php endif; ?>

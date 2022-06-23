@@ -20,7 +20,7 @@
     <div class="heading">
         <h2 class="branded-heading"><?= $heading; ?></h2>
     </div>
-    <div class="media">
+    <div class="media <?php if( ! empty ($embed) ) { echo 'has-embed'; } ?>">
         <?php if( $media ) : ?>
             <?php if( $media_type == 'video' ) : ?>
                 <video src="<?= $media; ?>" controls playsinline></video>

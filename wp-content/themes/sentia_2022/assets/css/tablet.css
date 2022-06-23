@@ -148,4 +148,32 @@
         opacity: 1;
     }
 
+    .testimonials-list {
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-columns: 1fr 1fr;
+        margin: 2rem auto;
+        max-width: var(--tablet);
+        position: relative;
+    }
+    
+    .testimonials-list .testimonial:not(:last-of-type) {
+        border: 0;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .testimonials-list .testimonial:nth-of-type(even) {
+        padding-top: 8rem;
+    }
+    
+    .testimonials-list:before {
+        background-color: var(--off-white);
+        content: ' ';
+        height: 100%;
+        left: 50%;
+        position: absolute;
+        width: 1px;
+    }
+
 }

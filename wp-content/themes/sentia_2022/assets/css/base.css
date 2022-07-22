@@ -624,3 +624,41 @@ label.subnav-toggle span:after {
 .subnavigation li.current a {
     display: none;
 }
+
+.copyright {
+    font-size: 0.85rem;
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.copyright span {
+    color: var(--turquoise);
+}
+
+.icons-list {
+    margin: 1rem auto;
+    max-width: 600px;
+}
+
+.icons-list .list-item {
+    align-items: center;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.icons-list .list-item img {
+    display: block;
+    margin: 0 auto;
+    max-width: 50%;
+}
+
+.icons-list .heading {
+    color: var(--turquoise);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+}

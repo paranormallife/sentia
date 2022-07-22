@@ -31,6 +31,11 @@
             </div>
         <?php endif; ?>
     </div>
+    <div class="copyright">
+        <div class="page-width">
+            All content &copy; <?= date('Y') . ' ' . get_bloginfo('name'); ?> <span>|</span> Website by <a href="https://ltlmtn.com" target="_blank">LTL.MTN</a>
+        </div>
+    </div>
 </footer>
 
 <?php get_template_part('assets/scripts'); ?>

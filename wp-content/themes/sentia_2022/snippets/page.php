@@ -5,11 +5,17 @@
     $parent = wp_get_post_parent_id();
     $siblings = get_pages( array( 'child_of' => $parent ));
     $this_title = get_the_title( $thisID );
+    $full_width = get_post_meta( $post->ID, 'full-width', true );
+    if( $full_width == true ) {
+        $width = 'full-width';
+    } else {
+        $width = 'slim-width';
+    }
 ?>
 
 <?php if ( is_page() && count( $children ) > 0 ) : // This is a parent page ?>
 
-    <div class="page-columns parent-page">
+    <div class="page-columns parent-page <?= $width; ?>">
         <nav class="subnavigation">
             <input type="checkbox" id="subnav_toggle" />
             <label class="subnav-toggle" for="subnav_toggle"><?= get_the_title(); ?> <span></span></label>
@@ -30,7 +36,7 @@
 
 <?php elseif ( is_page() && $post->post_parent ) : // This is a child page ?>
     
-    <div class="page-columns child-page">
+    <div class="page-columns child-page <?= $width; ?>">
         <nav class="subnavigation">
             <input type="checkbox" id="subnav_toggle" />
             <label class="subnav-toggle" for="subnav_toggle"><?= get_the_title( $parent ); ?> <span></span></label>
@@ -56,7 +62,7 @@
 
 <?php else : // This page is neither a parent nor a child. It is entirely alone, without hope for mercy. ?>
 
-    <div class="page-single">
+    <div class="page-single <?= $width; ?>">
         <article>
             <?php the_content(); ?>
         </article>

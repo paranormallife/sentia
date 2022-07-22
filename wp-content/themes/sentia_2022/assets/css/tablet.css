@@ -176,4 +176,32 @@
         width: 1px;
     }
 
+    .articles-grid {
+        grid-template-columns: repeat( 3, 1fr );
+    }
+
+    label.subnav-toggle {
+        display: none;
+    }
+    
+    .subnavigation ul {
+        max-height: 9999px;
+    }
+    
+    .subnavigation li.current a {
+        color: var(--charcoal);
+        display: block;
+    }
+    
+    .page-columns {
+        align-items: flex-start;
+        display: flex;
+    }
+    
+    .subnavigation {
+        margin-left: 2rem;
+        min-width: 250px;
+        order: 2;
+    }
+
 }

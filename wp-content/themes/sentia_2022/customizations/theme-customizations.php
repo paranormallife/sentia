@@ -49,6 +49,14 @@ function asw_customize_register( $wp_customize ) {
         'type'       => 'dropdown-pages',
     ) );
 
+    $wp_customize->add_setting( 'blog_heading');
+    $wp_customize->add_control( 'blog_heading', array(
+        'label'      => 'Blog Heading',
+        'section'    => 'defaults',
+        'description' => 'Appears above blog index grids',
+        'type'       => 'text',
+    ) );
+
     $wp_customize->add_setting( 'newsletter-form-code');
     $wp_customize->add_control( 'newsletter-form-code', array(
         'label'      => 'Newsletter Subscription Form Code',

@@ -538,3 +538,89 @@ main {
 .testimonials-list .attribution {
     color: var(--turquoise);
 }
+
+.homepage-posts {
+    margin-top: 2rem;
+}
+
+.articles-grid .thumbnail {
+    background-color: var(--off-white);
+    background-position: center;
+    background-size: cover;
+    height: 0;
+    margin-bottom: 1rem;
+    padding-top: 66.66%;
+}
+
+.articles-grid h3 {
+    font: normal 1.25rem var(--copy);
+    text-transform: uppercase;
+}
+
+.articles-grid .excerpt a {
+    color: var(--charcoal);
+}
+
+.articles-grid .excerpt a .read-more {
+    color: var(--salamander);
+}
+
+.articles-grid {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr;
+}
+
+.articles-grid a:hover {
+    color: var(--turquoise);
+    text-decoration: none;
+}
+
+.subnavigation {
+    background-color: var(--off-white);
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+.subnavigation ul {
+    list-style-type: none;
+}
+
+label.subnav-toggle {
+    font-size: 2rem;
+    opacity: 0.5;
+    text-transform: uppercase;
+}
+
+.subnavigation input {
+    display: none;
+}
+
+label.subnav-toggle span:after {
+    content: "+";
+    float: right;
+}
+
+.subnavigation li a {
+    display: block;
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+.subnavigation ul {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 500ms ease-in-out 0s;
+}
+
+.subnavigation input:checked ~ label ~ ul {
+    max-height: 9999px;
+}
+
+.subnavigation input:checked ~ label.subnav-toggle span:after {
+    content: "-";
+}
+
+.subnavigation li.current a {
+    display: none;
+}

@@ -602,7 +602,7 @@ label.subnav-toggle span:after {
 }
 
 .subnavigation li a {
-    display: block;
+    display: inline-block;
     font-size: 1.5rem;
     margin: 0.5rem 0;
 }
@@ -622,7 +622,12 @@ label.subnav-toggle span:after {
 }
 
 .subnavigation li.current a {
-    display: none;
+    color: var(--charcoal);
+    opacity: 0.5;
+}
+
+.subnavigation li.current a:before {
+    content: '» ';
 }
 
 .copyright {
@@ -636,7 +641,7 @@ label.subnav-toggle span:after {
 }
 
 .icons-list {
-    margin: 1rem auto;
+    margin: 1rem 0;
     max-width: 600px;
 }
 
@@ -661,4 +666,54 @@ label.subnav-toggle span:after {
     margin-bottom: 1rem;
     text-align: center;
     text-transform: uppercase;
+}
+
+.accordion-profile {
+    margin-bottom: 2rem;
+}
+
+.accordion-profile .image {
+    border: 1px solid var(--off-white);
+    display: block;
+    float: left;
+    margin: 0 0.5rem 0.5rem 0;
+    max-width: 50%;
+}
+
+.accordion-profile .header {
+    color: var(--turquoise);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+input.toggle {
+    display: none;
+}
+
+.toggle:not(:checked) ~ .expander ~ label .contract,
+.toggle:checked ~ .expander ~ label .expand {
+    display: none;
+}
+
+.accordion-button {
+    background-color: var(--salamander);
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+
+.accordion-button:hover {
+    opacity: 0.9;
+}
+
+.toggle ~ .expander {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease-in-out 0s;
+}
+
+.toggle:checked ~ .expander {
+    max-height: 9999px;
 }

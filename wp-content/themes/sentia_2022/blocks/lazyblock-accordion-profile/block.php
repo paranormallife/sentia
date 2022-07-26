@@ -16,24 +16,24 @@
             </div>
         <? endif; ?>
         <div class="intro-content">
-            <?php if( $header ) : ?>
+            <?php if( $heading ) : ?>
                 <div class="header">
-                    <?= $header; ?>
+                    <?= $heading; ?>
                 </div>
             <?php endif; ?>
             <?= $intro; ?>
         </div>
     </div>
-    <input type="checkbox" id="expander-<?= $accordion_id; ?>" />
+    <input type="checkbox" class="toggle" id="expander-<?= $accordion_id; ?>" />
+    <div class="expander">
+        <div class="content">
+            <?= $content; ?>
+        </div>
+    </div>
     <label for="expander-<?= $accordion_id; ?>">
         <div class="accordion-button">
             <span class="expand"><?= $expand; ?></span>
             <span class="contract"><?= $contract; ?></span>
         </div>
     </label>
-    <div class="expander">
-        <div class="content">
-            <?= $content; ?>
-        </div>
-    </div>
 </div>

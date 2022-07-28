@@ -225,4 +225,28 @@
         font-weight: 300;
     }
 
+    .page-single {
+        display: flex;
+    }
+    
+    .services-sidebar {
+        border-bottom: 0;
+        margin-left: 2rem;
+        min-width: 200px;
+        order: 2;
+    }
+    
+    .services-sidebar .heading .icon {
+        display: none;
+    }
+    
+    .services-sidebar .heading {
+        cursor: default;
+    }
+    
+    .services-sidebar ul {
+        max-height: 9999px;
+        overflow: visible;
+    }
+
 }

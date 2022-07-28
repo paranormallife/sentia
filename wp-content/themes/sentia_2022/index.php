@@ -41,6 +41,10 @@
 
         <?php get_template_part('snippets/page'); ?>
 
+    <?php elseif( is_singular('post') ) : ?>
+
+        <?php get_template_part('snippets/blog'); ?>
+
     <?php else : ?>
 
         <?php the_content(); ?>

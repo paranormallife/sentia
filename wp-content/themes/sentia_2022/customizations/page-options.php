@@ -14,6 +14,12 @@ class pageoptionsMetabox {
 			'default' => 'Full-Width Content',
 			'type' => 'checkbox',
 		),
+		array(
+			'label' => 'Show Services Sidebar',
+			'id' => 'show_services_sidebar',
+			'default' => 'Show Services Sidebar',
+			'type' => 'checkbox',
+		),
 	);
 
 	public function __construct() {
@@ -28,8 +34,8 @@ class pageoptionsMetabox {
 				__( 'Page Options', 'textdomain' ),
 				array( $this, 'meta_box_callback' ),
 				$single_screen,
-				'advanced',
-				'default'
+				'side',
+				'high'
 			);
 		}
 	}

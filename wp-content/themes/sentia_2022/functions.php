@@ -16,13 +16,23 @@ function register_my_menus() {
 	register_nav_menus(
 		array(
 			'nav1' => __( 'Main Navigation' ),
-			'nav2' => __( 'Footer Menu' )
+			'nav2' => __( 'Footer Menu' ),
+			'services' => __( 'Services Menu' )
 		)
 	);
 }
  
 
 function asw_widgets_init() {
+
+	register_sidebar( array(
+		'name'          => 'Services Sidebar',
+		'id'            => 'services_sidebar',
+		'before_widget' => '<div class="services-sidebar">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<div class="heading" onclick="servicesToggle()">',
+		'after_title'   => '<span class="icon"></span></div>'
+	) );
 
 	register_sidebar( array(
 		'name'          => 'Footer Top',

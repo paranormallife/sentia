@@ -11,6 +11,11 @@
 		element.classList.remove("menu-active");
 	}
 
+	function servicesToggle() {
+		var element = document.getElementById("body");
+		element.classList.toggle("services-active");
+	}
+
 	// Child Menus Toggle
 	jQuery( '.menu-item-has-children' ).on( 'click', function() {
 			jQuery( this ).toggleClass( 'active' );

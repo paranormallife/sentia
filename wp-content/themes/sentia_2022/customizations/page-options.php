@@ -20,6 +20,12 @@ class pageoptionsMetabox {
 			'default' => 'Show Services Sidebar',
 			'type' => 'checkbox',
 		),
+		array(
+			'label' => 'Hide Page Title',
+			'id' => 'hide_page_title',
+			'default' => 'Hide Page Title',
+			'type' => 'checkbox',
+		),
 	);
 
 	public function __construct() {

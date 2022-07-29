@@ -3,6 +3,7 @@
     $show_testimonials_carousel = get_theme_mod('show_testimonials_carousel');
     $show_blog_posts = get_theme_mod('show_blog_posts');
     $blog_heading_setting = get_theme_mod('blog_heading');
+    $map_code = get_theme_mod('map_code');
     if( $blog_heading_setting ) {
         $blog_heading = $blog_heading_setting;
     } else {
@@ -52,5 +53,11 @@
     <?php endif; ?>
 
 </main>
+
+<?php if( is_page('contact') or is_page('contact-us') ) : ?>
+    <?php if( $map_code ) : ?>
+        <div class="contact-map"><?= $map_code; ?></div>
+    <?php endif; ?>
+<?php endif; ?>
 
 <?php get_footer(); ?>

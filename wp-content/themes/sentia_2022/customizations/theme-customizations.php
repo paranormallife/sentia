@@ -57,6 +57,14 @@ function asw_customize_register( $wp_customize ) {
         'type'       => 'text',
     ) );
 
+    $wp_customize->add_setting( 'map_code');
+    $wp_customize->add_control( 'map_code', array(
+        'label'      => 'Map Embed Code',
+        'section'    => 'defaults',
+        'type'       => 'textarea',
+        'description' => 'Map appears on Contact page unless this is left blank.'
+    ) );
+
     $wp_customize->add_setting( 'newsletter-form-code');
     $wp_customize->add_control( 'newsletter-form-code', array(
         'label'      => 'Newsletter Subscription Form Code',

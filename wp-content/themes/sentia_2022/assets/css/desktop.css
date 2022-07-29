@@ -30,4 +30,8 @@
     .grid-content.columns-4 .grid {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+
+    .contact-map {
+        min-height: 400px;
+    }
 }

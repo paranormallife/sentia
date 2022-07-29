@@ -24,16 +24,18 @@
             <?= $intro; ?>
         </div>
     </div>
-    <input type="checkbox" class="toggle" id="expander-<?= $accordion_id; ?>" />
-    <div class="expander">
-        <div class="content">
-            <?= $content; ?>
+    <?php if( $content ) : ?>
+        <input type="checkbox" class="toggle" id="expander-<?= $accordion_id; ?>" />
+        <div class="expander">
+            <div class="content">
+                <?= $content; ?>
+            </div>
         </div>
-    </div>
-    <label for="expander-<?= $accordion_id; ?>">
-        <div class="accordion-button">
-            <span class="expand"><?= $expand; ?></span>
-            <span class="contract"><?= $contract; ?></span>
-        </div>
-    </label>
+        <label for="expander-<?= $accordion_id; ?>">
+            <div class="accordion-button">
+                <span class="expand"><?= $expand; ?></span>
+                <span class="contract"><?= $contract; ?></span>
+            </div>
+        </label>
+    <?php endif; ?>
 </div>

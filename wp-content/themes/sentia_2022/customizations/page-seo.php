@@ -75,7 +75,7 @@ class newMetabox {
 			}
 			$output .= $this->format_rows( $label, $input );
 		}
-		echo '<table class="form-table"><tbody>' . $output . '</tbody></table>';
+		echo '<table><tbody>' . $output . '</tbody></table>';
 	}
 
 	public function format_rows( $label, $input ) {

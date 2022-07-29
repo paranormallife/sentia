@@ -936,3 +936,47 @@ article li {
     border-color: var(--salamander);
     outline: none;
 }
+
+.test-selects .wpcf7-form-control {
+    column-count: 2;
+}
+
+.test-selects .wpcf7-list-item {
+    margin: 0.5rem;
+}
+
+.wpcf7-list-item {
+    margin: 0;
+}
+
+.contact-form input[type=submit] {
+    background-color: var(--salamander);
+    border: 0;
+    color: white;
+    cursor: pointer;
+    float: right;
+    padding: 0.5rem 1rem;
+    width: auto;
+}
+
+.contact-form input[type=submit]:hover {
+    background-color: var(--charcoal);
+}
+
+.testimonials main.page-width {
+    max-width: var(--tablet);
+}
+
+ul.articles {
+    list-style-type: none;
+    margin: 0;
+}
+
+ul.articles li a {
+    color: var(--turquoise);
+    font-size: 2rem;
+}
+
+ul.articles li {
+    margin-bottom: 1rem;
+}

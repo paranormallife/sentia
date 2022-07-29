@@ -65,6 +65,13 @@ function asw_customize_register( $wp_customize ) {
         'description' => 'Map appears on Contact page unless this is left blank.'
     ) );
 
+    $wp_customize->add_setting( 'header_scripts');
+    $wp_customize->add_control( 'header_scripts', array(
+        'label'      => 'Header Scripts',
+        'section'    => 'defaults',
+        'type'       => 'textarea'
+    ) );
+
     $wp_customize->add_setting( 'newsletter-form-code');
     $wp_customize->add_control( 'newsletter-form-code', array(
         'label'      => 'Newsletter Subscription Form Code',

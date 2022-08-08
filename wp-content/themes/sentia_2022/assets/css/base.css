@@ -1009,6 +1009,7 @@ ul.articles li {
     display: flex;
     justify-content: center;
     min-height: 150px;
+    padding: 1rem;
     position: relative;
     text-align: center;
 }

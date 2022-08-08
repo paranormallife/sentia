@@ -1,4 +1,5 @@
 <?php
+    $tagline = get_theme_mod('tagline');
     $phone = get_theme_mod('phone_number');
     $appointment_label = get_theme_mod('appointment_label');
     $appointment_destination = get_theme_mod('appointment_destination');
@@ -10,7 +11,12 @@
         <a href="<?= get_bloginfo( 'wpurl' ); ?>" title="<?php get_bloginfo( 'name' ); ?> Homepage">
             <?php if( is_front_page() ) : ?><h1><?php endif; ?>
                 <img src="<?= get_stylesheet_directory_uri(); ?>/assets/images/sentia-logo.svg" alt="Sentia logo" />
-            <?php if( is_front_page() ) : ?></h1><?php endif; ?>
+            <?php if( is_front_page() ) : ?></h1><?php endif; ?>        
+            <?php if( $tagline ) : ?>
+                <div class="tagline">
+                    <?= $tagline; ?>
+                </div>
+            <?php endif; ?>
         </a>
     </div>
     <div class="header-phone">

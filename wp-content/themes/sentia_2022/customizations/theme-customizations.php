@@ -28,6 +28,14 @@ function asw_customize_register( $wp_customize ) {
             
     // Create our settings
 
+    $wp_customize->add_setting( 'tagline');
+    $wp_customize->add_control( 'tagline', array(
+        'label'      => 'Tagline',
+        'section'    => 'defaults',
+        'type'       => 'text',
+        'description' => 'Appears beneath logo.'
+    ) );
+
     $wp_customize->add_setting( 'phone_number');
     $wp_customize->add_control( 'phone_number', array(
         'label'      => 'Phone Number',

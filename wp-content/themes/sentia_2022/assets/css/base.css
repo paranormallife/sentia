@@ -1026,10 +1026,10 @@ ul.articles li {
 
 .resources-grid .resource ion-icon {
     display: block;
-    transform: translateY(1em);
+    margin: 1em auto 0 auto;
     transition: all 250ms linear 0s;
 }
 
 .resources-grid .resource:hover ion-icon {
-    transform: translate(1.5em);
+    margin: 1.25em auto 0 auto;
 }

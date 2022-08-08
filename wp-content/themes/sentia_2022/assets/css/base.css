@@ -1023,3 +1023,13 @@ ul.articles li {
     border-style: solid;
     border-color: rgba(0, 0, 0, 0.25) #fff;
 }
+
+.resources-grid .resource ion-icon {
+    display: block;
+    transform: translateY(1em);
+    transition: all 250ms linear 0s;
+}
+
+.resources-grid .resource:hover ion-icon {
+    transform: translate(1.5em);
+}

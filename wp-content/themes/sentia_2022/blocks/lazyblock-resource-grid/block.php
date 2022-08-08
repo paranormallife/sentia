@@ -2,12 +2,14 @@
     <?php foreach( $attributes['resources'] as $resource ) : ?>
         <?php
             $url = $resource['file']['url'];
-            $file_name = $resource['file']['alt'];
+            $file_name = $resource['file']['caption'];
             $file_label = $resource['label'];
             if( $file_label ) {
                 $title = $file_label;
             } elseif( $file_name ) {
                 $title = $file_name;
+            } else {
+                $title = 'Downloadable File';
             }
         ?>
         <div class="resource">

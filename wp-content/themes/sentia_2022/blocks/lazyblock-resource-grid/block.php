@@ -17,6 +17,6 @@
                 <div class="title"><?= $title; ?></div>
                 <ion-icon name="download-outline"></ion-icon>
             </div>
-        </div>    
+        </a>    
     <?php endforeach; ?>
 </div>

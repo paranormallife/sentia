@@ -1007,6 +1007,7 @@ ul.articles li {
     background-color: var(--turquoise);
     color: white;
     display: flex;
+    justify-content: center;
     min-height: 150px;
     position: relative;
     text-align: center;

@@ -1015,7 +1015,7 @@ ul.articles li {
 }
 
 .resources-grid .resource:hover {
-    background-color: var(--salamander);
+    opacity: 0.9;
 }
 
 .resources-grid .resource:before {

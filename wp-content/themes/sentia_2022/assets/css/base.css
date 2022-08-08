@@ -990,3 +990,7 @@ ul.articles li a {
 ul.articles li {
     margin-bottom: 1rem;
 }
+
+.asw .has-background {
+    padding: 1rem;
+}

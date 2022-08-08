@@ -2,7 +2,7 @@
     <?php foreach( $attributes['resources'] as $resource ) : ?>
         <?php
             $url = $resource['file']['url'];
-            $file_name = $resource['file']['caption'];
+            $file_name = $resource['file']['title'];
             $file_label = $resource['label'];
             if( $file_label ) {
                 $title = $file_label;

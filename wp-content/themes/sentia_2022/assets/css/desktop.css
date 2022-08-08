@@ -34,4 +34,8 @@
     .contact-map {
         min-height: 400px;
     }
+
+    .resources-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }

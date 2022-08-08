@@ -1013,6 +1013,10 @@ ul.articles li {
     text-align: center;
 }
 
+.resources-grid .resource {
+    background-color: var(--salamander);
+}
+
 .resources-grid .resource:before {
     content: "";
     display: block;

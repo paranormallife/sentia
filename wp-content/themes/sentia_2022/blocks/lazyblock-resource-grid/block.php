@@ -6,8 +6,8 @@
             $file_label = $resource['label'];
             if( $file_label ) {
                 $title = $file_label;
-            } else {
-                $title = $file_caption;
+            } elseif( $file_name ) {
+                $title = $file_name;
             }
         ?>
         <div class="resource">

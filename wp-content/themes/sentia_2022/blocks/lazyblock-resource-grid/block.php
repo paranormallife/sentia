@@ -12,11 +12,11 @@
                 $title = 'Downloadable File';
             }
         ?>
-        <div class="resource">
-            <a href="<?= $url; ?>" title="Donwload <?= $title; ?>">
+        <a class="resource" href="<?= $url; ?>" title="Download <?= $title; ?>">
+            <div class="label">
                 <div class="title"><?= $title; ?></div>
                 <ion-icon name="download-outline"></ion-icon>
-            </a>
+            </div>
         </div>    
     <?php endforeach; ?>
 </div>

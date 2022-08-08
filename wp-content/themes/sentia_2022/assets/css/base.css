@@ -994,3 +994,31 @@ ul.articles li {
 .asw .has-background {
     padding: 1rem;
 }
+
+.resources-grid {
+    align-items: center;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.resources-grid .resource {
+    align-items: center;
+    background-color: var(--turquoise);
+    color: white;
+    display: flex;
+    min-height: 150px;
+    position: relative;
+    text-align: center;
+}
+
+.resources-grid .resource:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-width: 0 16px 16px 0;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.25) #fff;
+}

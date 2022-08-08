@@ -1013,7 +1013,7 @@ ul.articles li {
     text-align: center;
 }
 
-.resources-grid .resource {
+.resources-grid .resource:hover {
     background-color: var(--salamander);
 }
 

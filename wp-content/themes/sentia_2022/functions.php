@@ -113,7 +113,7 @@ function mytheme_setup() {
 		),
 		array(
 			'name' => __( 'Turquoise' ),
-			'slug' => 'turqoise',
+			'slug' => 'turquoise',
 			'color' => '#01C3CD',
 		),
 		array(

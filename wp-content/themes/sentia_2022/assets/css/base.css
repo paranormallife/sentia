@@ -1040,3 +1040,12 @@ ul.articles li {
 .resources-grid .resource:hover ion-icon {
     transform: translateY(1.25rem);
 }
+
+.blog-content ul,
+.blog-content ol {
+    margin: 1rem;
+}
+
+.blog-content li {
+    margin-bottom: 0.5rem;
+}

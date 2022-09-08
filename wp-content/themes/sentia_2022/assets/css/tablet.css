@@ -204,6 +204,11 @@
         order: 2;
     }
 
+    .icons-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
     .icons-list .list-item {
         grid-template-columns: 33.33% 1fr;
         margin-bottom: 2rem;

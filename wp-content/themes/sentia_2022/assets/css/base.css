@@ -7,7 +7,7 @@ body {
     background-color: white;
     color: var(--charcoal);
     font: normal 1rem var(--copy);
-    line-height: 1.25;
+    line-height: 1.5;
 }
 
 a {

@@ -6,8 +6,6 @@ $the_query = new WP_Query( array(
     'order' => 'ASC'
 ) ); ?>
 
-<h2>What People are Saying about Sentia</h2>
- 
 <?php if ( $the_query->have_posts() ) : ?>
     <div class="testimonials-list">
         <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>

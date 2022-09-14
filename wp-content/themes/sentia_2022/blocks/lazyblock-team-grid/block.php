@@ -14,17 +14,19 @@
 ?>
 
 <div class="team-members-grid columns-<?= $columns; ?>">
-    <div class="featured-team-member">
-        <div class="headshot">
-            <div class="image" style="background-image: url('<?= $featured_image; ?>');">&nbsp;</div>
-            <div class="overlay">&nbsp;</div>
+    <?php if( $featured_name ) : ?>
+        <div class="featured-team-member">
+            <div class="headshot">
+                <div class="image" style="background-image: url('<?= $featured_image; ?>');">&nbsp;</div>
+                <div class="overlay">&nbsp;</div>
+            </div>
+            <div class="content">
+                <div class="heading"><?= $featured_name; ?></div>
+                <div class="subheading"><?= $featured_role; ?></div>
+                <div class="text"><?= $featured_bio; ?></div>
+            </div>
         </div>
-        <div class="content">
-            <div class="heading"><?= $featured_name; ?></div>
-            <div class="subheading"><?= $featured_role; ?></div>
-            <div class="text"><?= $featured_bio; ?></div>
-        </div>
-    </div>
+    <?php endif; ?>
     <div class="grid-items">
         <?php foreach( $attributes['team-members'] as $tm ) : ?>
             <?php 
@@ -43,9 +45,9 @@
                 <div class="overlay">&nbsp;</div>
             </div>
             <div class="content">
-                <div class="heading"><?= $featured_name; ?></div>
-                <div class="subheading"><?= $featured_role; ?></div>
-                <div class="text"><?= $featured_bio; ?></div>
+                <div class="heading"><?= $name; ?></div>
+                <div class="subheading"><?= $role; ?></div>
+                <div class="text"><?= $bio; ?></div>
             </div>
         <?php endforeach; ?>
     </div>

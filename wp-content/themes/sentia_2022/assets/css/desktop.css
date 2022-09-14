@@ -38,4 +38,8 @@
     .resources-grid {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+
+    .navigation ul:not(.sub-menu) {
+        padding: 0;
+    }
 }

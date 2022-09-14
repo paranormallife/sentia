@@ -15,7 +15,8 @@
     
     .header-phone .icon,
     .header-appointment .icon {
-        font-size: 1rem;
+        border-radius: 50%;
+        font-size: 0.75rem;
         height: 1.5rem;
         width: 1.5rem;
     }
@@ -36,30 +37,32 @@
         margin-bottom: 0.25rem;
     }
 
-    .navigation ul li {
-        display: inline-block;
+    .navigation ul:not(.sub-menu) {
+        display: grid;
+        grid-auto-flow: column;
+        grid-gap: 2rem;
+        margin: 0 auto;
+        max-width: var(--desktop);
+        padding: 0 1rem;
+    }
+
+    .navigation ul:not(.sub-menu) > li {
+        padding: 1rem 0;
     }
     
-    .navigation ul {
-        text-align: right;
+    .navigation ul.sub-menu a {
+        font-size: 1rem;
     }
     
-    .navigation {
-        justify-self: end;
+    .navigation .services.menu-item-has-children > ul {
+        grid-template-columns: 1fr 1fr 1fr;
     }
-    
-    .navigation ul li:not(:last-of-type):after {
-        border-right: 1px solid var(--off-white);
-        content: ' ';
-        display: inline-block;
-        height: 2rem;
-        margin: 0 1rem;
-        transform: translateY(0.5rem);
-        width: 1px;
-    }
-    
-    .navigation a {
-        display: inline-block;
+
+    .main-menu-container {
+        background-color: var(--off-white);
+        margin-left: 50%;
+        transform: translateX(-50%);
+        width: 100vw;
     }
     
     .search {

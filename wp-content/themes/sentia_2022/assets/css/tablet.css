@@ -263,4 +263,15 @@
         grid-template-columns: 1fr 1fr 1fr;
     }
 
+    .featured-team-member {
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-columns: 250px 1fr;
+        padding: 2rem;
+    }
+    
+    .featured-team-member .heading {
+        margin-top: -0.25em;
+    }
+
 }

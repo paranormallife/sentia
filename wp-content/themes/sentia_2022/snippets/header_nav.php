@@ -11,12 +11,8 @@
         <a href="<?= get_bloginfo( 'wpurl' ); ?>" title="<?php get_bloginfo( 'name' ); ?> Homepage">
             <?php if( is_front_page() ) : ?><h1><?php endif; ?>
                 <img src="<?= get_stylesheet_directory_uri(); ?>/assets/images/sentia-logo.svg" alt="Sentia logo" />
-            <?php if( is_front_page() ) : ?></h1><?php endif; ?>        
-            <?php if( $tagline ) : ?>
-                <div class="tagline">
-                    <?= $tagline; ?>
-                </div>
-            <?php endif; ?>
+            <?php if( is_front_page() ) : ?></h1><?php endif; ?>
+            <?php get_template_part('snippets/tagline'); ?>
         </a>
     </div>
     <div class="header-phone">

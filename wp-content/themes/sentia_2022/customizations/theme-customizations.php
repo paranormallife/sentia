@@ -16,6 +16,12 @@ function asw_customize_register( $wp_customize ) {
         'panel'             => 'theme',
     ) );
     
+    $wp_customize->add_section( 'taglines' , array(
+        'title'             => 'Taglines',
+        'description'       => 'Taglines are randomly selected to appear beneath the logo.',
+        'panel'             => 'theme',
+    ) );
+    
     $wp_customize->add_section( 'homepage' , array(
         'title'             => 'Homepage',
         'panel'             => 'theme',
@@ -28,10 +34,52 @@ function asw_customize_register( $wp_customize ) {
             
     // Create our settings
 
-    $wp_customize->add_setting( 'tagline');
-    $wp_customize->add_control( 'tagline', array(
-        'label'      => 'Tagline',
-        'section'    => 'defaults',
+    // Taglines -------------------------------------------------------- /
+
+    $wp_customize->add_setting( 'tagline_1');
+    $wp_customize->add_control( 'tagline_1', array(
+        'label'      => 'Tagline #1',
+        'section'    => 'taglines',
+        'type'       => 'text',
+        'description' => 'Appears beneath logo.'
+    ) );
+
+    $wp_customize->add_setting( 'tagline_2');
+    $wp_customize->add_control( 'tagline_2', array(
+        'label'             => 'Tagline #2',
+        'section'    => 'taglines',
+        'type'       => 'text',
+        'description' => 'Appears beneath logo.'
+    ) );
+
+    $wp_customize->add_setting( 'tagline_3');
+    $wp_customize->add_control( 'tagline_3', array(
+        'label'             => 'Tagline #3',
+        'section'    => 'taglines',
+        'type'       => 'text',
+        'description' => 'Appears beneath logo.'
+    ) );
+
+    $wp_customize->add_setting( 'tagline_4');
+    $wp_customize->add_control( 'tagline_4', array(
+        'label'             => 'Tagline #4',
+        'section'    => 'taglines',
+        'type'       => 'text',
+        'description' => 'Appears beneath logo.'
+    ) );
+
+    $wp_customize->add_setting( 'tagline_5');
+    $wp_customize->add_control( 'tagline_5', array(
+        'label'             => 'Tagline #5',
+        'section'    => 'taglines',
+        'type'       => 'text',
+        'description' => 'Appears beneath logo.'
+    ) );
+
+    $wp_customize->add_setting( 'tagline_6');
+    $wp_customize->add_control( 'tagline_6', array(
+        'label'             => 'Tagline #6',
+        'section'    => 'taglines',
         'type'       => 'text',
         'description' => 'Appears beneath logo.'
     ) );

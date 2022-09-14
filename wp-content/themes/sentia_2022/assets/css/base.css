@@ -1114,3 +1114,23 @@ ul.articles li {
     font-size: 0.85rem;
     margin-top: 1rem;
 }
+
+.team-member .overlay {
+    background-color: var(--salamander);
+    bottom: 0;
+    color: white;
+    left: 0;
+    margin: 1rem;
+    padding: 0.5rem;
+    position: absolute;
+}
+
+.team-member a .subheading {
+    color: var(--charcoal);
+}
+
+.team-members-grid .grid-items {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+}

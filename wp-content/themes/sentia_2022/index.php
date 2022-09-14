@@ -38,6 +38,15 @@
         <h2><?= $blog_heading; ?></h2>
         <?php get_template_part('snippets/blog_archive'); ?>
 
+    <?php elseif( is_page('our-team') ) : ?>
+
+        <?php get_template_part('snippets/page'); ?>
+        <?php get_template_part('snippets/team-grid'); ?>
+
+    <?php elseif( is_singular('team') ) : ?>
+
+        
+
     <?php elseif( is_page() ) : ?>
 
         <?php get_template_part('snippets/page'); ?>

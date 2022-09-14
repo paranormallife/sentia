@@ -142,3 +142,5 @@ include_once( get_template_directory() . '/customizations/theme-customizations.p
 include_once( get_template_directory() . '/customizations/testimonials.php' );
 include_once( get_template_directory() . '/customizations/page-options.php' );
 include_once( get_template_directory() . '/customizations/page-seo.php' );
+include_once( get_template_directory() . '/customizations/team-members.php' );
+include_once( get_template_directory() . '/customizations/team-member-fields.php' );

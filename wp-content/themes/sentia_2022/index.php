@@ -43,13 +43,13 @@
         <?php get_template_part('snippets/page'); ?>
         <?php get_template_part('snippets/team-grid'); ?>
 
-    <?php elseif( is_singular('team') ) : ?>
-
-        
-
     <?php elseif( is_page() ) : ?>
 
         <?php get_template_part('snippets/page'); ?>
+
+    <?php elseif( is_singular('team') ) : ?>
+
+        <?php get_template_part('snippets/team-member'); ?>
 
     <?php elseif( is_singular('post') ) : ?>
 

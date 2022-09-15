@@ -278,4 +278,22 @@
         grid-template-columns: 1fr 1fr 1fr;
     }
 
+    .team-member-profile .columns {
+        grid-template-columns: 33.33% 1fr;
+    }
+
+    .team-member-profile .nav-column {
+        grid-column: 1 / span all;
+    }
+
+    .team-member-profile .nav-column ul {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .team-member-profile .image-column img {
+        margin-top: 0.25rem;
+    }
+
 }

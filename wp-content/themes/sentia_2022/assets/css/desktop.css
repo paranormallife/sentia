@@ -42,4 +42,20 @@
     .navigation ul:not(.sub-menu) {
         padding: 0;
     }
+
+    .team-member-profile .columns {
+        grid-template-columns: 25% 1fr 25%;
+    }
+
+    .team-member-profile .nav-column {
+        grid-column: 3;
+    }
+
+    .team-member-profile .nav-column ul {
+        display: block;
+    }
+
+    .team-member-profile .bio-column {
+        border-bottom: 0;
+    }
 }

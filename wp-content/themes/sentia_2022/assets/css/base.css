@@ -1134,3 +1134,47 @@ ul.articles li {
     grid-gap: 1rem;
     grid-template-columns: 1fr;
 }
+
+.team-member-profile h1 {
+    margin-bottom: 0;
+}
+
+.team-member-profile h2 {
+    font: normal 1.5rem var(--heading);
+}
+
+.team-member-profile .summary {
+    color: var(--turquoise);
+    padding: 1rem 0 0 0;
+}
+
+.team-member-profile .columns {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr;
+}
+
+.team-member-profile .bio-column {
+    border-bottom: 1px solid var(--off-white);
+    padding-bottom: 2rem;
+}
+
+.team-member-profile .nav-column .heading a {
+    display: block;
+    font: bold 1.5rem var(--copy);
+}
+
+.team-member-profile .nav-column ul {
+    list-style-type: none;
+    margin: 1rem 0;
+}
+
+.team-member-profile .nav-column ul a {
+    color: var(--turquoise);
+    display: block;
+    margin: 0.5rem 0;
+}
+
+.team-member-profile .nav-column ul .current a {
+    color: var(--charcoal);
+}

@@ -8,6 +8,10 @@
         max-width: 290px;
     }
 
+    .tagline {
+        white-space: nowrap;
+    }
+
     .media-feature {
         align-items: stretch;
         grid-template-columns: 66.66% 1fr;

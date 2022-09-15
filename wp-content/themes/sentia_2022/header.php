@@ -16,7 +16,7 @@
 <?php get_template_part('snippets/header_meta') ?>
 
 <?php
-  $hash = '20220915';
+  $hash = '20220915b';
   $theme = get_stylesheet_directory_uri();
 ?>
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>?v=<?= $hash; ?>" />

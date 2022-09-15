@@ -81,12 +81,44 @@ header {
 
 .header-logo a .tagline {
     color: var(--charcoal);
+    display: block;
     margin-top: 0.5em;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.header-logo a:hover {
+    border: 0;
+    text-decoration: none;
 }
 
 .header-logo a:hover .tagline {
     border: 0;
+    color: var(--salamander);
     text-decoration: none;
+}
+
+.header-logo .tagline:before {
+    animation: reveal 1s ease 1s 1 normal forwards;
+    background-color: white;
+    content: ' ';
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+
+@keyframes reveal {
+	0% {
+		transform: scaleX(1);
+		transform-origin: 100% 100%;
+	}
+
+	100% {
+		transform: scaleX(0.0);
+		transform-origin: 100% 100%;
+	}
 }
 
 .header-phone {

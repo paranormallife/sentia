@@ -17,7 +17,15 @@
 ?>
 <div class="team-member-profile">
     <h1><?php the_title(); ?></h1>
-    <h2><?= get_post_meta( $post->ID, 'role', true) ?></h2>
+    <?php
+        $role = get_post_meta( $post->ID, 'role', true );
+        if( $role ) {
+            $subheading = $role;
+        } else {
+            $subheading = 'Tutor';
+        }
+    ?>
+    <h2><?= $subheading; ?></h2>
     <div class="columns">
         <div class="image-column">
             <img src="<?= $thumb; ?>" alt="Photo of <?= get_the_title(); ?>" />

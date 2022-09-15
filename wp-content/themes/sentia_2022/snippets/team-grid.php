@@ -71,7 +71,15 @@
                         </div>
                         <div class="content">
                             <div class="heading"><?php the_title(); ?></div>
-                            <div class="subheading"><?= get_post_meta( $post->ID, 'role', true ); ?></div>
+                            <?php
+                                $role = get_post_meta( $post->ID, 'role', true );
+                                if( $role ) {
+                                    $subheading = $role;
+                                } else {
+                                    $subheading = 'Tutor';
+                                }
+                            ?>
+                            <div class="subheading"><?= $subheading; ?></div>
                         </div>
                     </a>
                 </div>

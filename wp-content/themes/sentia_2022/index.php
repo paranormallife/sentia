@@ -43,6 +43,10 @@
         <?php get_template_part('snippets/page'); ?>
         <?php get_template_part('snippets/team-grid'); ?>
 
+    <?php elseif( is_archive('team') ) : ?>
+
+        <?php get_template_part('snippets/team-grid'); ?>
+
     <?php elseif( is_page() ) : ?>
 
         <?php get_template_part('snippets/page'); ?>

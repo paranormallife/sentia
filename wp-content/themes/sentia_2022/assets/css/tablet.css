@@ -59,6 +59,10 @@
         grid-template-columns: 1fr 1fr 1fr;
     }
 
+    .header-logo .tagline {
+        white-space: nowrap;
+    }
+
     .main-menu-container {
         background-color: var(--off-white);
         margin-left: 50%;

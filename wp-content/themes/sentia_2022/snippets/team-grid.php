@@ -62,7 +62,12 @@
                     <a href="<?= get_the_permalink(); ?>">
                         <div class="headshot">
                             <div class="image" style="background-image: url('<?= $thumb; ?>');">&nbsp;</div>
-                            <div class="overlay"><?= get_post_meta( $post->ID, 'summary', true ); ?></div>
+                            <?php
+                                $summary = get_post_meta( $post->ID, 'summary', true );
+                                if( $summary ) :
+                            ?>
+                                <div class="overlay"><?= $summary; ?></div>
+                            <?php endif; ?>
                         </div>
                         <div class="content">
                             <div class="heading"><?php the_title(); ?></div>

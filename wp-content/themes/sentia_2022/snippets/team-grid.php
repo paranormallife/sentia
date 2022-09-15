@@ -12,7 +12,7 @@
         'post_type' => 'team',
         'posts_per_page' => -1,
         'orderby' => 'menu_order',
-        'order' => 'DESC',
+        'order' => 'ASC',
         'meta_key'   => 'featured',
         'meta_value' => 0
     ) ); 

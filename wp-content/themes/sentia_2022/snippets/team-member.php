@@ -10,7 +10,8 @@
     $team = new WP_Query( array(
         'post_type' => 'team',
         'posts_per_page' => -1,
-        'orderby' => 'menu_order'
+        'orderby' => 'menu_order',
+        'order' => 'DESC'
     ) );
     $parentID = get_the_id();
 ?>

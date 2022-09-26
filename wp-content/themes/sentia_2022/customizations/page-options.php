@@ -11,20 +11,25 @@ class pageoptionsMetabox {
 		array(
 			'label' => 'Full-Width Content',
 			'id' => 'full-width',
-			'default' => 'Full-Width Content',
+			'default' => '0',
 			'type' => 'checkbox',
 		),
 		array(
 			'label' => 'Show Services Sidebar',
-			'id' => 'show_services_sidebar',
-			'default' => 'Show Services Sidebar',
+			'id' => 'show_service_sidebar',
+			'default' => '0',
 			'type' => 'checkbox',
 		),
 		array(
 			'label' => 'Hide Page Title',
 			'id' => 'hide_page_title',
-			'default' => 'Hide Page Title',
+			'default' => '0',
 			'type' => 'checkbox',
+		),
+		array(
+			'label' => 'Related Posts Tag',
+			'id' => 'related_posts',
+			'type' => 'text',
 		),
 	);
 
@@ -40,7 +45,7 @@ class pageoptionsMetabox {
 				__( 'Page Options', 'textdomain' ),
 				array( $this, 'meta_box_callback' ),
 				$single_screen,
-				'side',
+				'normal',
 				'high'
 			);
 		}

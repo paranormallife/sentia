@@ -62,6 +62,12 @@
     <?php else : ?>
 
         <?php the_content(); ?>
+        <?php
+            $related_posts_ID = get_post_meta($post->ID,'related_posts',true);
+            if( $related_posts_ID ) {
+                echo 'Related Posts ID is: ' . $related_posts_ID . '.';
+            }
+        ?>
     
     <?php endif; ?>
 

@@ -45,8 +45,8 @@ class pageoptionsMetabox {
 				__( 'Page Options', 'textdomain' ),
 				array( $this, 'meta_box_callback' ),
 				$single_screen,
-				'normal',
-				'high'
+				'advanced',
+				'core'
 			);
 		}
 	}

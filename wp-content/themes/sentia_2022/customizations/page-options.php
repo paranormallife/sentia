@@ -27,7 +27,7 @@ class pageoptionsMetabox {
 			'type' => 'checkbox',
 		),
 		array(
-			'label' => 'Related Posts Tag',
+			'label' => 'Related Posts Category',
 			'id' => 'related_posts',
 			'type' => 'categories',
 		),
@@ -45,8 +45,8 @@ class pageoptionsMetabox {
 				__( 'Page Options', 'textdomain' ),
 				array( $this, 'meta_box_callback' ),
 				$single_screen,
-				'advanced',
-				'core'
+				'normal',
+				'high'
 			);
 		}
 	}

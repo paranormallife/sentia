@@ -21,11 +21,13 @@
         <?php endif; ?>
         <?php the_content(); ?>
     </article>
-
-    <?php
-        $related_posts_ID = get_post_meta($post->ID,'related_posts',true);
-        if( $related_posts_ID ) {
-            echo 'Related Posts ID is: ' . $related_posts_ID . '.';
-        }
-    ?>
 </div>
+
+
+
+<?php
+    $related_posts_ID = get_post_meta($post->ID,'related_posts',true);
+    if( $related_posts_ID ) {
+        echo 'Related Posts ID is: ' . $related_posts_ID . '.';
+    }
+?>

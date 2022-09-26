@@ -29,7 +29,7 @@ class pageoptionsMetabox {
 		array(
 			'label' => 'Related Posts Tag',
 			'id' => 'related_posts',
-			'type' => 'text',
+			'type' => 'categories',
 		),
 	);
 
@@ -74,6 +74,17 @@ class pageoptionsMetabox {
 						$meta_field['id'],
 						$meta_field['id']
 						);
+					break;
+				case 'categories':
+					$categoriesargs = array(
+						'selected' => $meta_value,
+						'hide_empty' => 0,
+						'echo' => 0,
+						'name' => $meta_field['id'],
+						'id' => $meta_field['id'],
+						'show_option_none' => 'Select a category',
+					);
+					$input = wp_dropdown_categories($categoriesargs);
 					break;
 				default:
 					$input = sprintf(

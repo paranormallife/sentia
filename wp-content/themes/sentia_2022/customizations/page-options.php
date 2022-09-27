@@ -23,16 +23,6 @@ class optionsMetabox {
 			'id' => 'hide_page_title',
 			'type' => 'checkbox',
 		),
-		array(
-			'label' => 'Related Posts Category ID',
-			'id' => 'related_posts',
-			'type' => 'text',
-		),
-		array(
-			'label' => 'Featured Testimonial ID',
-			'id' => 'featured_testimonial',
-			'type' => 'text',
-		),
 	);
 
 	public function __construct() {
@@ -44,7 +34,7 @@ class optionsMetabox {
 		foreach ( $this->screen as $single_screen ) {
 			add_meta_box(
 				'options',
-				__( 'Page Options', 'textdomain' ),
+				__( 'Options', 'textdomain' ),
 				array( $this, 'meta_box_callback' ),
 				$single_screen,
 				'normal',

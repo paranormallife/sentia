@@ -1220,3 +1220,12 @@ ul.articles li {
 .related-posts {
     margin-bottom: 2rem;
 }
+
+.featured-testimonial {
+    background-color: var(--off-white);
+    padding: 1rem;
+}
+
+.featured-testimonial .testimonials-cta {
+    margin-top: 1rem;
+}

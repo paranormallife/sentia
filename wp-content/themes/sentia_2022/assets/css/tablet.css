@@ -297,4 +297,16 @@
         margin-top: 0.25rem;
     }
 
+    .featured-testimonial {
+        padding: 2rem;
+    }
+
+    .featured-testimonial .quote {
+        font-size: 1.5rem;
+    }
+    
+    .featured-testimonial .testimonials-cta {
+        margin-top: 2rem;
+    }
+
 }

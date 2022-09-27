@@ -16,8 +16,8 @@ function diwp_add_multiple_fields(){
  global $post;
 
  // Get Value of Fields From Database
- $diwp_selectfield = get_post_meta( $post->ID, '_diwp_select_field', true);
- $diwp_selectfield_2 = get_post_meta( $post->ID, '_diwp_select_field_2', true);
+ $diwp_selectfield = get_post_meta( $post->ID, 'featured_testimonial', true);
+ $diwp_selectfield_2 = get_post_meta( $post->ID, 'related_posts', true);
   
 ?>
   
@@ -25,7 +25,7 @@ function diwp_add_multiple_fields(){
 <div class="row">
  <label>Featured Testimonial</label>
  <div class="fields">
-     <select name="_diwp_select_field">
+     <select name="featured_testimonial">
         <option value="null" <?php if($diwp_selectfield == 'null' ) echo 'selected'; ?>>Select a Testimonial</option>
          <?php
             $testimonials = get_posts( array(
@@ -44,7 +44,7 @@ function diwp_add_multiple_fields(){
 <div class="row">
 <label>Related Posts Category</label>
 <div class="fields">
-    <select name="_diwp_select_field_2">
+    <select name="related_posts">
         <option value="null" <?php if($diwp_selectfield_2 == 'null' ) echo 'selected'; ?>>Select a Category</option>
         <?php
             $categories = get_categories( array(
@@ -67,12 +67,12 @@ function diwp_save_multiple_fields_metabox(){
  
     global $post;
  
-    if(isset($_POST["_diwp_select_field"])) :
-    update_post_meta($post->ID, '_diwp_select_field', $_POST["_diwp_select_field"]);
+    if(isset($_POST["featured_testimonial"])) :
+    update_post_meta($post->ID, 'featured_testimonial', $_POST["featured_testimonial"]);
     endif;
  
-    if(isset($_POST["_diwp_select_field_2"])) :
-    update_post_meta($post->ID, '_diwp_select_field_2', $_POST["_diwp_select_field_2"]);
+    if(isset($_POST["related_posts"])) :
+    update_post_meta($post->ID, 'related_posts', $_POST["related_posts"]);
     endif;
  
 }

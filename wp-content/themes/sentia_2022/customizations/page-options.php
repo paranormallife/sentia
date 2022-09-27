@@ -26,12 +26,12 @@ class optionsMetabox {
 		array(
 			'label' => 'Styled Heading (use &lt;em&gt; to emphasize text)',
 			'id' => 'styled_heading',
-			'type' => 'text',
+			'type' => 'textarea',
 		),
 		array(
 			'label' => 'Styled Summary',
 			'id' => 'styled_summary',
-			'type' => 'wysiwyg',
+			'type' => 'textarea',
 		),
 	);
 
@@ -77,11 +77,13 @@ class optionsMetabox {
 						$meta_field['id']
 						);
 					break;
-				case 'wysiwyg':
-					ob_start();
-					wp_editor($meta_value, $meta_field['id']);
-					$input = ob_get_contents();
-					ob_end_clean();
+				case 'textarea':
+					$input = sprintf(
+						'<textarea style="width: 100%%" id="%s" name="%s" rows="5">%s</textarea>',
+						$meta_field['id'],
+						$meta_field['id'],
+						$meta_value
+					);
 					break;
 				default:
 					$input = sprintf(

@@ -586,7 +586,8 @@ main {
     background-color: var(--turquoise);
 }
 
-.testimonials-list .thumbnail {
+.testimonials-list .thumbnail,
+.featured-testimonial .thumbnail {
     background-position: center;
     background-size: cover;
     border-radius: 50%;
@@ -603,7 +604,8 @@ main {
     padding-bottom: 2rem;
 }
 
-.testimonials-list .attribution {
+.testimonials-list .attribution,
+.featured-testimonial .attribution {
     color: var(--turquoise);
 }
 

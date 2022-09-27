@@ -13,21 +13,6 @@ class pageoptionsMetabox {
 			'id' => 'related_posts',
 			'type' => 'categories',
 		),
-		array(
-			'label' => 'Full-Width Content',
-			'id' => 'full-width',
-			'type' => 'checkbox',
-		),
-		array(
-			'label' => 'Show Services Sidebar',
-			'id' => 'show_services_sidebar',
-			'type' => 'checkbox',
-		),
-		array(
-			'label' => 'Hide Title',
-			'id' => 'hide_page_title',
-			'type' => 'checkbox',
-		),
 	);
 
 	public function __construct() {

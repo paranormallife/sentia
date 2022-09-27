@@ -143,6 +143,7 @@ if (is_singular() && comments_open() && (get_option('thread_comments') == 1)) {
 include_once( get_template_directory() . '/customizations/theme-customizations.php' );
 include_once( get_template_directory() . '/customizations/testimonials.php' );
 include_once( get_template_directory() . '/customizations/page-options.php' );
+include_once( get_template_directory() . '/customizations/custom_page_meta.php' );
 include_once( get_template_directory() . '/customizations/page-seo.php' );
 include_once( get_template_directory() . '/customizations/team-members.php' );
 include_once( get_template_directory() . '/customizations/team-member-fields.php' );

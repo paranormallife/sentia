@@ -1,10 +1,10 @@
 <?php
-// Meta Box Class: Page Options
+// Meta Box Class: Options
 // Get the field value: $metavalue = get_post_meta( $post_id, $field_id, true );
-class pageoptionsMetabox {
+class optionsMetabox {
 
 	private $screen = array(
-		'page'
+		'page',
 	);
 
 	private $meta_fields = array(
@@ -12,6 +12,21 @@ class pageoptionsMetabox {
 			'label' => 'Related Posts Category',
 			'id' => 'related_posts',
 			'type' => 'categories',
+		),
+		array(
+			'label' => 'Full-Width Content',
+			'id' => 'full-width',
+			'type' => 'checkbox',
+		),
+		array(
+			'label' => 'Show Services Sidebar',
+			'id' => 'show_services_sidebar',
+			'type' => 'checkbox',
+		),
+		array(
+			'label' => 'Hide Title',
+			'id' => 'hide_page_title',
+			'type' => 'checkbox',
 		),
 	);
 
@@ -23,8 +38,8 @@ class pageoptionsMetabox {
 	public function add_meta_boxes() {
 		foreach ( $this->screen as $single_screen ) {
 			add_meta_box(
-				'pageoptions',
-				__( 'Page Options', 'textdomain' ),
+				'options',
+				__( 'Options', 'textdomain' ),
 				array( $this, 'meta_box_callback' ),
 				$single_screen,
 				'normal',
@@ -34,7 +49,7 @@ class pageoptionsMetabox {
 	}
 
 	public function meta_box_callback( $post ) {
-		wp_nonce_field( 'pageoptions_data', 'pageoptions_nonce' );
+		wp_nonce_field( 'options_data', 'options_nonce' );
 		$this->field_generator( $post );
 	}
 
@@ -88,10 +103,10 @@ class pageoptionsMetabox {
 	}
 
 	public function save_fields( $post_id ) {
-		if ( ! isset( $_POST['pageoptions_nonce'] ) )
+		if ( ! isset( $_POST['options_nonce'] ) )
 			return $post_id;
-		$nonce = $_POST['pageoptions_nonce'];
-		if ( !wp_verify_nonce( $nonce, 'pageoptions_data' ) )
+		$nonce = $_POST['options_nonce'];
+		if ( !wp_verify_nonce( $nonce, 'options_data' ) )
 			return $post_id;
 		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
 			return $post_id;
@@ -113,6 +128,6 @@ class pageoptionsMetabox {
 	}
 }
 
-if (class_exists('pageoptionsMetabox')) {
-	new pageoptionsMetabox;
+if (class_exists('optionsMetabox')) {
+	new optionsMetabox;
 };

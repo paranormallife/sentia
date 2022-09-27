@@ -70,4 +70,8 @@
     .team-member-profile .bio-column {
         border-bottom: 0;
     }
+    
+    .styled-page-top .summary {
+        font-size: 1.25rem;
+    }
 }

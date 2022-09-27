@@ -7,7 +7,22 @@
     } else {
         $width = 'slim-width';
     }
+    $styled_heading = get_post_meta( $post->ID, 'styled_heading', true );
+    $styled_summary = get_post_meta( $post->ID, 'styled_summary', true );
+    $featured_image = get_the_post_thumbnail_url( $post->ID, 'large' );
 ?>
+
+<?php if( $styled_heading ) : ?>
+    <div class="branded-heading">
+        <?= $styled_heading; ?>
+    </div>
+    <?php if( $featured_image and $styled_summary ) : ?>
+        <div class="styled-page-top">
+            <div class="thumbnail">&nbsp;</div>
+            <div class="summary"><?= $styled_summary; ?></div>
+        </div>
+    <?php endif; ?>
+<?php endif; ?>
 
 <div class="page-single <?= $width; ?>">
     <?php if( $show_services_sidebar == true && is_active_sidebar( 'services_sidebar' ) ) {

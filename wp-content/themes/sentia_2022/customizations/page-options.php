@@ -23,6 +23,16 @@ class optionsMetabox {
 			'id' => 'hide_page_title',
 			'type' => 'checkbox',
 		),
+		array(
+			'label' => 'Styled Heading (use <em> to emphasize text)',
+			'id' => 'styled_heading',
+			'type' => 'text',
+		),
+		array(
+			'label' => 'Styled Summary',
+			'id' => 'styled_summary',
+			'type' => 'textarea',
+		),
 	);
 
 	public function __construct() {
@@ -66,6 +76,14 @@ class optionsMetabox {
 						$meta_field['id'],
 						$meta_field['id']
 						);
+					break;
+				case 'textarea':
+					$input = sprintf(
+						'<textarea style="width: 100%%" id="%s" name="%s" rows="5">%s</textarea>',
+						$meta_field['id'],
+						$meta_field['id'],
+						$meta_value
+					);
 					break;
 				default:
 					$input = sprintf(

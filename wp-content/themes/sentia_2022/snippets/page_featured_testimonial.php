@@ -8,7 +8,7 @@ $the_query = new WP_Query( array(
 ) ); ?>
  
 <?php if ( $the_query->have_posts() ) : ?>
-    <div class="featured_testimonial page-width slim">
+    <div class="featured_testimonial page-width slim-width">
             <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                 <div class="testimonial">
                     <div class="quote"><?= get_the_excerpt(); ?></div>

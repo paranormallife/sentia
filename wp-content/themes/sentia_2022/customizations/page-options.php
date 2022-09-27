@@ -25,12 +25,7 @@ class pageoptionsMetabox {
 			'id' => 'hide_page_title',
 			'default' => '0',
 			'type' => 'checkbox',
-		),
-		array(
-			'label' => 'Related Posts Category',
-			'id' => 'related_posts',
-			'type' => 'categories',
-		),
+		)
 	);
 
 	public function __construct() {

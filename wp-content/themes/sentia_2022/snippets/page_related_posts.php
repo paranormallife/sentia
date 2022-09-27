@@ -3,7 +3,7 @@
     $placeholder = get_stylesheet_directory_uri() . '/assets/images/placeholder.png';
 ?>
 
-<div class="related-posts page-width">
+<div class="related-posts page-width slim">
     <h2>Related Blog Posts</h2>
     <div class="articles-grid">
         <?php $the_query = new WP_Query( array( 

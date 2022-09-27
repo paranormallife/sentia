@@ -30,10 +30,10 @@ class newMetabox {
 		foreach ( $this->screen as $single_screen ) {
 			add_meta_box(
 				'new',
-				__( 'Meta Box', 'textdomain' ),
+				__( 'SEO', 'textdomain' ),
 				array( $this, 'meta_box_callback' ),
 				$single_screen,
-				'side',
+				'normal',
 				'high'
 			);
 		}

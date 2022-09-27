@@ -9,11 +9,6 @@ class optionsMetabox {
 
 	private $meta_fields = array(
 		array(
-			'label' => 'Related Posts Category',
-			'id' => 'related_posts',
-			'type' => 'categories',
-		),
-		array(
 			'label' => 'Full-Width Content',
 			'id' => 'full-width',
 			'type' => 'checkbox',
@@ -28,6 +23,16 @@ class optionsMetabox {
 			'id' => 'hide_page_title',
 			'type' => 'checkbox',
 		),
+		array(
+			'label' => 'Related Posts Category ID',
+			'id' => 'related_posts',
+			'type' => 'text',
+		),
+		array(
+			'label' => 'Featured Testimonial ID',
+			'id' => 'featured_testimonial',
+			'type' => 'text',
+		),
 	);
 
 	public function __construct() {
@@ -39,7 +44,7 @@ class optionsMetabox {
 		foreach ( $this->screen as $single_screen ) {
 			add_meta_box(
 				'options',
-				__( 'Options', 'textdomain' ),
+				__( 'Page Options', 'textdomain' ),
 				array( $this, 'meta_box_callback' ),
 				$single_screen,
 				'normal',
@@ -71,17 +76,6 @@ class optionsMetabox {
 						$meta_field['id'],
 						$meta_field['id']
 						);
-					break;
-				case 'categories':
-					$categoriesargs = array(
-						'selected' => $meta_value,
-						'hide_empty' => 0,
-						'echo' => 0,
-						'name' => $meta_field['id'],
-						'id' => $meta_field['id'],
-						'show_option_none' => 'Select a category',
-					);
-					$input = wp_dropdown_categories($categoriesargs);
 					break;
 				default:
 					$input = sprintf(

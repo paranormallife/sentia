@@ -18,7 +18,7 @@
     </div>
     <?php if( $featured_image and $styled_summary ) : ?>
         <div class="styled-page-top">
-            <div class="thumbnail">&nbsp;</div>
+            <div class="thumbnail" style="background-image: url('<?= $featured_image; ?>');">&nbsp;</div>
             <div class="summary"><?= $styled_summary; ?></div>
         </div>
     <?php endif; ?>

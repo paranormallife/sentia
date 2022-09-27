@@ -25,9 +25,5 @@
 
 
 
-<?php
-    $related_posts_ID = get_post_meta($post->ID,'related_posts',true);
-    if( $related_posts_ID ) {
-        echo 'Related Posts ID is: ' . $related_posts_ID . '.';
-    }
-?>
+<?php get_template_part('snippets/page_related_posts'); ?>
+<?php get_template_part('snippets/page_featured_testimonial'); ?>

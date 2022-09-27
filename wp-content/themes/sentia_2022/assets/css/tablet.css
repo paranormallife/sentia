@@ -308,5 +308,21 @@
     .featured-testimonial .testimonials-cta {
         margin-top: 2rem;
     }
+    
+    .styled-page-top .columns {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: 66.66% 1fr;
+    }
+    
+    .styled-page-top .branded-heading {
+        line-height: 0.75;
+        max-width: 66.6%;
+        position: relative;
+    }
+
+    .styled-page-top .summary {
+        font-size: 1.25rem;
+    }
 
 }

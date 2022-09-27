@@ -1229,3 +1229,19 @@ ul.articles li {
 .featured-testimonial .testimonials-cta {
     margin-top: 1rem;
 }
+
+.styled-page-top {
+    margin-bottom: 2rem;
+}
+
+.styled-page-top .thumbnail {
+    min-height: 300px;
+    background-position: center;
+    background-size: cover;
+}
+
+.styled-page-top .summary {
+    background-color: var(--turquoise);
+    color: white;
+    padding: 1rem;
+}

@@ -13,15 +13,17 @@
 ?>
 
 <?php if( $styled_heading ) : ?>
-    <div class="branded-heading">
-        <?= $styled_heading; ?>
-    </div>
-    <?php if( $featured_image and $styled_summary ) : ?>
-        <div class="styled-page-top">
-            <div class="thumbnail" style="background-image: url('<?= $featured_image; ?>');">&nbsp;</div>
-            <div class="summary"><?= $styled_summary; ?></div>
+    <div class="styled-page-top">
+        <div class="branded-heading">
+            <?= $styled_heading; ?>
         </div>
-    <?php endif; ?>
+        <?php if( $featured_image and $styled_summary ) : ?>
+            <div class="columns">
+                <div class="thumbnail" style="background-image: url('<?= $featured_image; ?>');">&nbsp;</div>
+                <div class="summary"><?= $styled_summary; ?></div>
+            </div>
+        <?php endif; ?>
+    </div>
 <?php endif; ?>
 
 <div class="page-single <?= $width; ?>">

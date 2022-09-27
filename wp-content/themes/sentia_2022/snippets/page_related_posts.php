@@ -4,6 +4,7 @@
 ?>
 
 <div class="related-posts page-width">
+    <h2>Related Blog Posts</h2>
     <div class="articles-grid">
         <?php $the_query = new WP_Query( array( 
             'post_type' => 'post', 

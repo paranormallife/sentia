@@ -1210,3 +1210,7 @@ ul.articles li {
 .team-member-profile .nav-column ul .current a {
     color: var(--charcoal);
 }
+
+.page-single {
+    margin-bottom: 2rem;
+}

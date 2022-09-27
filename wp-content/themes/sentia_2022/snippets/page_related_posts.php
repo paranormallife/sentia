@@ -4,7 +4,7 @@
 ?>
 
 <div class="related-posts page-width">
-    <div class="posts-grid count-3">
+    <div class="articles-grid">
         <?php $the_query = new WP_Query( array( 
             'post_type' => 'post', 
             'posts_per_page' => 3,
@@ -24,14 +24,12 @@
                 }
             ?>
     
-                <article>
-                    <div class="thumb" style="background-image: url('<?= $thumb; ?>');">&nbsp;</div>
-                    <div class="heading">
-                        <a href="<?= get_the_permalink(); ?>">
-                            <?php the_title(); ?>
-                        </a>
-                    </div>
-                </article>
+            <article>
+                <a href="<?= get_the_permalink(); ?>">
+                    <div class="thumbnail" style="background-image: url('<?= $thumb ?>');">&nbsp;</div>
+                    <h3><?php the_title(); ?></h3>
+                </a>
+            </article>
     
             <?php endwhile; ?>
             <?php wp_reset_postdata(); ?>

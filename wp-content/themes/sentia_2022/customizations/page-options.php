@@ -31,7 +31,7 @@ class optionsMetabox {
 		array(
 			'label' => 'Styled Summary',
 			'id' => 'styled_summary',
-			'type' => 'textarea',
+			'type' => 'wysiwyg',
 		),
 	);
 
@@ -77,13 +77,11 @@ class optionsMetabox {
 						$meta_field['id']
 						);
 					break;
-				case 'textarea':
-					$input = sprintf(
-						'<textarea style="width: 100%%" id="%s" name="%s" rows="5">%s</textarea>',
-						$meta_field['id'],
-						$meta_field['id'],
-						$meta_value
-					);
+				case 'wysiwyg':
+					ob_start();
+					wp_editor($meta_value, $meta_field['id']);
+					$input = ob_get_contents();
+					ob_end_clean();
 					break;
 				default:
 					$input = sprintf(

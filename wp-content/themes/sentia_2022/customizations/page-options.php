@@ -24,7 +24,7 @@ class optionsMetabox {
 			'type' => 'checkbox',
 		),
 		array(
-			'label' => 'Styled Heading (use <em> to emphasize text)',
+			'label' => 'Styled Heading (use &lt;em&gt; to emphasize text)',
 			'id' => 'styled_heading',
 			'type' => 'text',
 		),

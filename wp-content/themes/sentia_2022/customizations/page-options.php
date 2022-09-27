@@ -4,7 +4,7 @@
 class pageoptionsMetabox {
 
 	private $screen = array(
-		'page',
+		'page'
 	);
 
 	private $meta_fields = array(

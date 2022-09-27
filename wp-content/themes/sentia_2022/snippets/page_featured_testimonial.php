@@ -9,7 +9,7 @@
 ?>
  
 <?php if ( $the_query->have_posts() ) : ?>
-    <div class="featured_testimonial page-width slim-width">
+    <div class="featured-testimonial page-width slim-width">
             <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                 <?php 
                     $featured_image = get_the_post_thumbnail_url( $post->ID, 'thumbnail' );

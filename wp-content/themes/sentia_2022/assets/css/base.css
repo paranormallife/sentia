@@ -1245,3 +1245,11 @@ ul.articles li {
     color: white;
     padding: 1rem;
 }
+
+.styled-page-top .branded-heading {
+    margin-bottom: 0;
+}
+
+.styled-page-top .columns {
+    margin-top: -0.5rem;
+}

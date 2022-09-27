@@ -1,31 +1,14 @@
 <?php
-// Meta Box Class: Page Options
+// Meta Box Class: Options
 // Get the field value: $metavalue = get_post_meta( $post_id, $field_id, true );
-class pageoptionsMetabox {
+class optionsMetabox {
 
 	private $screen = array(
+		'post',
 		'page',
 	);
 
 	private $meta_fields = array(
-		array(
-			'label' => 'Full-Width Content',
-			'id' => 'full-width',
-			'default' => '0',
-			'type' => 'checkbox',
-		),
-		array(
-			'label' => 'Show Services Sidebar',
-			'id' => 'show_service_sidebar',
-			'default' => '0',
-			'type' => 'checkbox',
-		),
-		array(
-			'label' => 'Hide Page Title',
-			'id' => 'hide_page_title',
-			'default' => '0',
-			'type' => 'checkbox',
-		),
 		array(
 			'label' => 'Related Posts Category',
 			'id' => 'related_posts',
@@ -41,8 +24,8 @@ class pageoptionsMetabox {
 	public function add_meta_boxes() {
 		foreach ( $this->screen as $single_screen ) {
 			add_meta_box(
-				'pageoptions',
-				__( 'Page Options', 'textdomain' ),
+				'options',
+				__( 'Options', 'textdomain' ),
 				array( $this, 'meta_box_callback' ),
 				$single_screen,
 				'normal',
@@ -52,7 +35,7 @@ class pageoptionsMetabox {
 	}
 
 	public function meta_box_callback( $post ) {
-		wp_nonce_field( 'pageoptions_data', 'pageoptions_nonce' );
+		wp_nonce_field( 'options_data', 'options_nonce' );
 		$this->field_generator( $post );
 	}
 
@@ -67,14 +50,6 @@ class pageoptionsMetabox {
 				}
 			}
 			switch ( $meta_field['type'] ) {
-				case 'checkbox':
-					$input = sprintf(
-						'<input %s id=" %s" name="%s" type="checkbox" value="1">',
-						$meta_value === '1' ? 'checked' : '',
-						$meta_field['id'],
-						$meta_field['id']
-						);
-					break;
 				case 'categories':
 					$categoriesargs = array(
 						'selected' => $meta_value,
@@ -98,7 +73,7 @@ class pageoptionsMetabox {
 			}
 			$output .= $this->format_rows( $label, $input );
 		}
-		echo '<table><tbody>' . $output . '</tbody></table>';
+		echo '<table class="form-table"><tbody>' . $output . '</tbody></table>';
 	}
 
 	public function format_rows( $label, $input ) {
@@ -106,10 +81,10 @@ class pageoptionsMetabox {
 	}
 
 	public function save_fields( $post_id ) {
-		if ( ! isset( $_POST['pageoptions_nonce'] ) )
+		if ( ! isset( $_POST['options_nonce'] ) )
 			return $post_id;
-		$nonce = $_POST['pageoptions_nonce'];
-		if ( !wp_verify_nonce( $nonce, 'pageoptions_data' ) )
+		$nonce = $_POST['options_nonce'];
+		if ( !wp_verify_nonce( $nonce, 'options_data' ) )
 			return $post_id;
 		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
 			return $post_id;
@@ -131,6 +106,6 @@ class pageoptionsMetabox {
 	}
 }
 
-if (class_exists('pageoptionsMetabox')) {
-	new pageoptionsMetabox;
+if (class_exists('optionsMetabox')) {
+	new optionsMetabox;
 };

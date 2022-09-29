@@ -42,5 +42,5 @@
 
 
 
-<?php get_template_part('snippets/page_related_posts'); ?>
 <?php get_template_part('snippets/page_featured_testimonial'); ?>
+<?php get_template_part('snippets/page_related_posts'); ?>

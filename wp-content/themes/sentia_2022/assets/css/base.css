@@ -1223,6 +1223,7 @@ ul.articles li {
 
 .featured-testimonial {
     background-color: var(--off-white);
+    margin: 2rem auto;
     padding: 1rem;
 }
 

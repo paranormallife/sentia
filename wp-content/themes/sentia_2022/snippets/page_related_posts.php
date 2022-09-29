@@ -17,7 +17,7 @@
     
             <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
             <?php 
-                $featured_image = get_the_post_thumbnail_url( $post->ID, 'thumbnail' );
+                $featured_image = get_the_post_thumbnail_url( $post->ID, 'medium' );
                 if( $featured_image ) {
                     $thumb = $featured_image;
                 } else {

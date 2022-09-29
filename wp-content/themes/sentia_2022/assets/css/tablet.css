@@ -321,4 +321,8 @@
         position: relative;
     }
 
+    .page-cta .content {
+        margin-top: -2rem;
+    }
+
 }

@@ -325,4 +325,24 @@
         margin-top: -2rem;
     }
 
+    .video-showcase {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: 66.66% 1fr;
+        grid-template-areas: "video list";
+    }
+
+    .video-selects {
+        grid-area: list;
+    }
+
+    .video-area {
+        grid-area: video;
+    }
+
+    .video-selects {
+        background-color: var(--off-white);
+        padding: 2rem;
+    }
+
 }

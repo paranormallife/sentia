@@ -1273,3 +1273,46 @@ ul.articles li {
     margin: -1rem 1rem 1rem 1rem;
     padding: 1rem;
 }
+
+.video-showcase {
+    margin-bottom: 2rem;
+}
+
+.video-selects ol {
+    margin: 0;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 0 1.25rem;
+}
+
+.video-selects label {
+    cursor: pointer;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.video-showcase input {
+    display: none;
+}
+
+.video-showcase .video-area {
+    display: grid;
+    grid-template-areas:
+        "video";
+}
+
+.video-showcase .video-holder {
+    display: none;
+}
+
+.video-showcase input:checked ~ .video-holder {
+    display: block;
+}
+
+.video-container {
+    grid-area: video;
+}
+
+.video-selects label:hover {
+    color: var(--salamander);
+}

@@ -13,6 +13,7 @@
             <?php
                 $image = $item['image']['url'];
                 $heading = $item['item_heading'];
+                $subheading = $item['item_subheading'];
                 $blurb = $item['blurb'];
                 $destination = $item['destination'];
             ?>
@@ -20,6 +21,9 @@
                 <?php if( $destination ) : ?><a href="<?= $destination; ?>"><?php endif; ?>
                     <div class="thumb" style="background-image: url('<?= $image; ?>');">&nbsp;</div>
                     <h3><?= $heading; ?></h3>
+                    <?php if( $subheading ) : ?>
+                        <h4><?= $subheading; ?></h4>
+                    <?php endif; ?>
                     <div class="blurb"><span><?= $blurb; ?></span></div>
                 <?php if( $destination ) : ?></a><?php endif; ?>
             </div>

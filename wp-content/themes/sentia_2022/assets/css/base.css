@@ -1316,3 +1316,7 @@ ul.articles li {
 .video-selects label:hover {
     color: var(--salamander);
 }
+
+.grid-item .subheading {
+    color: var(--charcoal);
+}

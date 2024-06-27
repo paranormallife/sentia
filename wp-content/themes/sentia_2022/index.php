@@ -40,8 +40,8 @@
 
     <?php elseif( is_page('our-team') ) : ?>
 
-        <?php get_template_part('snippets/page'); ?>
         <?php get_template_part('snippets/team-grid'); ?>
+        <?php get_template_part('snippets/page'); ?>
 
     <?php elseif( is_archive('team') ) : ?>
 

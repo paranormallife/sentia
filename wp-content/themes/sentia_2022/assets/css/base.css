@@ -1317,6 +1317,10 @@ ul.articles li {
     color: var(--salamander);
 }
 
-.grid-item .subheading {
+.grid-item h4 {
     color: var(--charcoal);
+}
+
+.icons-list .content {
+    align-self: start;
 }

@@ -5,10 +5,16 @@
     $blurb = $attributes['blurb'];
     $label = $attributes['label'];
     $destination = $attributes['destination'];
-    $media = $attributes['media']['url'];
-    $poster = $attributes['poster']['url'];
+    $get_media = $attributes['media'];
+    if( $get_media ) {
+        $media = $get_media['url'];
+    }
+    $get_poster = $attributes['poster'];
+    if( $get_poster ) {
+        $poster = $get_poster['url'];
+    }
     $embed = $attributes['embed'];
-    if( strpos($media, '.mp4') !== false or strpos($media, '.mov') !== false or strpos($media, '.mpeg') !== false ) {
+    if( strpos($get_media, '.mp4') !== false or strpos($get_media, '.mov') !== false or strpos($get_media, '.mpeg') !== false ) {
         $media_type = 'video';
     } else {
         $media_type = 'image';

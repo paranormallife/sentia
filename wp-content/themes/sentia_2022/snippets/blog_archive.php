@@ -16,8 +16,14 @@
                 <a href="<?= get_the_permalink(); ?>">
                     <?php
                         $post_thumb = get_the_post_thumbnail_url( $post->ID, 'large' );
+                        $placeholder = get_stylesheet_directory_uri() . '/assets/images/placeholder.png';
+                        if( $post_thumb ) {
+                            $thumbnail = $post_thumb;
+                        } else {
+                            $thumbnail = $placeholder;
+                        }
                     ?>
-                    <div class="thumbnail" style="background-image: url('<?= $post_thumb ?>');">&nbsp;</div>
+                    <div class="thumbnail" style="background-image: url('<?= $thumbnail; ?>');">&nbsp;</div>
                     <h3><?php the_title(); ?></h3>
                     <div class="excerpt">
                         <?php 
